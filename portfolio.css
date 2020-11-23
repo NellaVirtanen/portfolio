@@ -36,6 +36,17 @@ form{
   border-bottom-style:double;
 }
 
+.nappi{
+  width: 7%;
+  padding: 10px 15px;
+  border: 0;
+  background: rgb(30, 30, 41);
+  color: #fff;
+  border-radius: 5px;
+margin: 5px 0;
+  
+}
+
 body{
 
 //  background-image: url("https://i.imgur.com/KcEU8s0.png");
