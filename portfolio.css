@@ -1,0 +1,171 @@
+h1{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    animation: color-change 2s infinite;
+}
+@keyframes color-change {
+  0% { color: rgb(255, 151, 215); }
+  50% { color: rgb(167, 35, 255); }
+  100% { color: rgb(255, 151, 215); }
+
+}
+
+.nella{
+background: #473074;
+padding: 10px 15px;
+width: 47%;
+}
+
+h2{
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-decoration:underline;
+
+}
+
+.header{
+  color: white;  
+}
+
+form{
+  color: white;
+  text-align: left;
+  padding-left: 15px;
+    background-color: #2d1f4b;
+      border-right-style:double;
+  border-left-style:double;
+  border-top-style:double;
+  border-bottom-style:double;
+}
+
+body{
+
+//  background-image: url("https://i.imgur.com/KcEU8s0.png");
+   background-color: #150e24; 
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:16px;
+   color: white;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 48.5%;
+}
+
+td, th {
+  border: 1px solid #473074;
+  text-align: left;
+      opacity: 0.7;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #473074;
+}
+
+td, th {
+  border: 1px solid #473074;
+  text-align: left;
+  padding: 8px;
+}
+
+table:hover, td:hover, tr:hover, th:hover{
+  border: 1px solid #473074;
+  text-align: left;
+      opacity: 0.9;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #473074;
+}
+
+.yhteydenotto label{
+display:block;
+}
+.yhteydenotto input[type="text"], .yhteydenotto textarea{
+  padding:10px;
+  width:30%;
+}
+
+.nappula{
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+  text-decoration:underline dashed;
+  text-underline-position: under;
+   color: white;
+  display: block;
+  padding: 8px;
+  background-color: black;
+    width:8%;
+  position:fixed;
+  bottom:30px;
+left:0px;
+}
+
+.laatikko{
+  float:left;
+  width:25%;
+  height: 120px;
+  color: white;
+     background-color: #381647; 
+           opacity: 0.8;
+  border:2px solid white;
+  padding:10px;
+  box-sizing:border-box;
+  margin-top:25px;
+}
+
+.laatikko:hover{
+opacity: 1.0;
+}
+
+.nappula:hover{
+  background-color:#ec4770;
+  color:white;
+  
+}
+.nappula:active{
+  background-color:white;
+  color:black;
+  
+}
+
+img:hover{
+  opacity: 0.9;
+}
+
+.valikko{
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+  text-decoration:none;
+  text-underline-position: under;
+   color: white;
+  display: block;
+  padding: 20px 30px;
+  background-color: #473074;
+  position:absolute;
+  width: 6%;
+  top:80px;
+right:80px;
+      border-right-style:double;
+  border-left-style:double;
+  border-top-style:double;
+  border-bottom-style:double;
+  border-color: white; 
+}
+.teemanappi{
+  width: 97%;
+  padding: 10px 15px;
+  border: 0;
+  background: rgb(30, 30, 41);
+  color: #fff;
+  border-radius: 5px;
+margin: 5px 0;
+}
+
+.teemanappi:hover{
+  background: rgb(41, 41, 41);
+}
+
+}
