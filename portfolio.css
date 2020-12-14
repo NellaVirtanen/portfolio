@@ -9,7 +9,7 @@ h1{
 
 }
 
-.nella{
+.otsikko{
 background: #473074;
 padding: 10px 15px;
 width: 47%;
@@ -61,6 +61,7 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 48.5%;
+//  background: #22143f;
 }
 
 td, th {
@@ -110,7 +111,7 @@ font-weight:bold;
   background-color: black;
     width:8%;
   position:fixed;
-  bottom:30px;
+  bottom:15px;
 left:8px;
 }
 
@@ -177,6 +178,12 @@ margin: 5px 0;
 
 .teemanappi:hover{
   background: rgb(41, 41, 41);
-}
 
+}
+a:taulukkolinkki {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+}
 }

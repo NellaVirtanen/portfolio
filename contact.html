@@ -6,7 +6,7 @@
     <title>repl.it</title>
 
     <link href="portfolio.css" rel="stylesheet" type="text/css" />
-        <script src="portfolio.js"></script>
+
   </head>
   <body>
     <h1>*:･ﾟ✧ Nella Virtanen - Portfolio *:･ﾟ✧</h1>
@@ -18,33 +18,36 @@
   <h2>Ota yhteyttä!</h2>
 
 <form class="yhteydenotto">
-  <br>
-      <div class="lomakeElementti">
-        <label>Nimi: </label>
-        <input type="text">
-        </div>
-      <br>
-            <div class="lomakeElementti">
-        <label>Email: </label>
-        <input type="text">
-        </div>
-      <br>            
-      <div class="lomakeElementti">
-        <label>Puh: </label>
-        <input type="text">
-        </div>
-      <br>
-       <div class="lomakeElementti">
-        <label>Ikä, numero: </label>
-        <input type="text">
-        </div>
-        <br>
-           <div class="lomakeElementti">
-        <label>Syntymäaika, pvm: </label>
-        <input type="text">
-        </div>
+<div class="virheilmoitus"></div>
+<br>
+<form name="myForm" method="post" onsubmit="return validateForm()">
 
-        <br>
+<div class="lomakeElementti" >
+<label>*Nimi: </label><span id="error-name"></span>
+<input type="text" id="nimi" placeholder="Enter your name">
+</div>
+<br>
+<div class="lomakeElementti">
+<label>*Email: </label><span id="error-email"></span>
+<input type="text" id="email" placeholder="Enter your email">
+</div>
+<br>            
+<div class="lomakeElementti">
+<label>Puh: </label>
+<input type="text" id="puh" placeholder="Enter your phone number">
+</div>
+<br>
+<div class="lomakeElementti">
+<label>Ikä, numero: </label>
+<input type="text" id="ika" placeholder="Enter your age">
+</div>
+<br>
+<div class="lomakeElementti">
+<label>Syntymäaika, pvm: </label>
+<input type="text" id="dateof" placeholder="Enter your date of birth">
+</div>
+
+<br>
 Miten haluat että olen yhteydessä?
 
 <br>
@@ -59,40 +62,41 @@ selected="selected" value="ika2030">Sähköpostitse
 </option>
 </select>
 </p>
-       <div class="lomakeElementti">
-        <label>Viesti: </label>
-        <textarea></textarea>
-        </div>
-        <br>
-        <input class="nappi" type="submit" value="Lähetä">
-         <br>
-         <br>
-        </form>
+<div class="lomakeElementti">
+<label>*Viesti: </label><span id="error-message"></span>
+<textarea type="text" id="tieto" placeholder="Type your message here"></textarea>
+</div>
+<br>
+<input class="nappi" type="submit" value="Lähetä" >
+<br>
+<br>
+</form>
 
-
-         <div class="laatikko">
-         <b>Yhteystiedot:</b>
+        <div class="laatikko">
+        <b>Yhteystiedot:</b>
         <br> Nella Virtanen
-          <br> Osoite
-         <br> Sähköposti
-         <br> Puhelinnumero
-          </div>
-          <div class="laatikko">
-          <b>Uutisia:</b>
-         <br> - Lisää uutinen -
-          <br> - Lisää uutinen -
-          <br> - Lisää uutinen -
-          </div>
-            <div class="laatikko">
-          <b>Sosiaalinen media:</b>
-          <br> Twitter 
-          <br> Facebook 
-          <br> Instagram 
-          <br> LinkedIn
-          </div>
-                      <div class="laatikko">
+        <br> Osoite
+        <br> Sähköposti
+        <br> Puhelinnumero
+        </div>
+
+        <div class="laatikko" id="koronabox">
+        <b>Korona tilastot: </b><a href="koronataulukko.html">(Näytä Lisää)</a>
+        <div class="korona"> </div>
+
+        </div>
+
+        <div class="laatikko">
+        <b>Sosiaalinen media:</b>
+        <br> Twitter 
+        <br> Facebook 
+        <br> Instagram 
+        <br> LinkedIn
+        </div>
+
+        <div class="laatikko">
 <img src="https://i.imgur.com/mqg3qfP.png" alt="Logo">
-          </div>
+</div>
 
 <br>
 <br><a class="nappula asemointi", href="portfolio.html">Takaisin</a>
@@ -107,11 +111,11 @@ selected="selected" value="ika2030">Sähköpostitse
 <button class="teemanappi" id="switch" onclick="runSateenkaari()">Sateenkaari</button>
 <br>
 
-<p id = "GFG_UP" style = 
+<p id = "YLOS" style = 
 "font-size: 16px; font-weight: bold;">      
 </p> 
   
-<p id = "GFG_DOWN" style = 
+<p id = "ALAS" style = 
 "color:green; font-size: 20px; font-weight: bold;"> 
 </p> 
 
@@ -119,6 +123,10 @@ selected="selected" value="ika2030">Sähköpostitse
 </a>
 </ul>
 </div>
+
+<script src="portfolio.js"></script>
+<script src="korona.js"></script>
+<script src="sendemail.js"></script>
 
 </span>
   </body>
