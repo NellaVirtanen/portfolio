@@ -20,7 +20,7 @@ xhr.send();
 }
 
 getJSON('https://api.apify.com/v2/datasets/BDEAOLx0DzEW91s5L/items?format=json&clean=1', function(err, data){
-let taulukko = `<table width="30%" style="border:1px solid black"><center>`
+let taulukko = `<table width="30%" style="border:1px solid black">`
 
 const historia = data.map(function(paiva){
 
@@ -43,7 +43,7 @@ taulukko = taulukko + `<tr><td>Ei dataa</td><td>Ei dataa</td></tr>`;
 
 });
 
-taulukko = taulukko + `</table></center>`
+taulukko = taulukko + `</table>`
 document.body.innerHTML = taulukko;
 
 });
