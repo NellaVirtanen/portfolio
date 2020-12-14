@@ -20,30 +20,30 @@ xhr.send();
 }
 
 getJSON('https://api.apify.com/v2/datasets/BDEAOLx0DzEW91s5L/items?format=json&clean=1', function(err, data){
-let taulukko = `<table width="60%" style="border:1px solid black">`
+let taulukko = `<table width="30%" style="border:1px solid black"><center>`
 
 const historia = data.map(function(paiva){
 
 if(paiva.confimedCases != undefined){
 //console.log(`Confirmed: ${paiva.confirmedCases}`);
-taulukko = taulukko + `<tr><td>Vahvistetut</td><td>${paiva.confirmedCases}</td></tr>`;
+taulukko = taulukko + `<tr><td>Vahvistetut</td><td>${paiva.confirmedCases} <td> ${paiva.lastUpdatedAtSource}</td></tr>`;
 }
 else if (paiva.testedCases != undefined){
 //console.log(`Tested: ${paiva.testedCases}`);
-taulukko = taulukko + `<tr><td>Testatut</td><td>${paiva.testedCases}</td></tr>`;
+taulukko = taulukko + `<tr><td>Testatut</td><td>${paiva.testedCases} <td> ${paiva.lastUpdatedAtSource}</td></tr>`;
 }
 else if (paiva.infected != undefined){
 //console.log(`Infected: ${paiva.infected}`);
-taulukko = taulukko + `<tr><td>Tartunnat</td><td>${paiva.infected}</td></tr>`;
+taulukko = taulukko + `<tr><td>Tartunnat</td><td>${paiva.infected} <td> ${paiva.lastUpdatedAtSource}</td></tr>`
 }
 else{
-taulukko = taulukko + `<tr><td>Ei dataa</td><td>`
+taulukko = taulukko + `<tr><td>Ei dataa</td><td>Ei dataa</td></tr>`;
 }
 
 
 });
 
-taulukko = taulukko + `</table>`
+taulukko = taulukko + `</table></center>`
 document.body.innerHTML = taulukko;
 
 });
