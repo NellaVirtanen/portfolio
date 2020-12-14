@@ -180,8 +180,8 @@ margin: 5px 0;
   background: rgb(41, 41, 41);
 
 }
-a:taulukkolinkki {
-  color: green;
+a {
+  color: pink;
   background-color: transparent;
   text-decoration: none;
 }
